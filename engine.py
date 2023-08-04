@@ -29,7 +29,7 @@ class Engine:
             self.update_fov() # Update the FOV before the player's next action
 
     def update_fov(self) -> None:
-        """Recompute the visible area based on the palyer's point of view"""
+        """Recompute the visible area based on the player's point of view"""
         self.game_map.visible[:] = compute_fov(
             self.game_map.tiles["transparent"],
             (self.player.x, self.player.y),
